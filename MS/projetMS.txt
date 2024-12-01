@@ -1,0 +1,56 @@
+Objectif
+Mettre en place un architecture microservice et mettre en pratique les concepts vu pendant le cours
+Pas de contrainte de languages.
+
+Présentation:
+
+1- Présentation power point
+          Projet
+          Cas d'utilisation
+          Problème à résoudre
+          Architecture 
+                  Explication fonctionnelle de chaque service
+                  Diagramme recommandé
+          Choix de modélisation
+          Choix de communication entre les services
+          Ne pas se limiter à la démo et envisager les prochaines étapes du projet
+
+2- Démonstration de ce qui à été mis en place
+          3 microservice avec 3 fonctionnalités par microservice
+
+
+Attention
+Démo sur Github, doit être fonctionnel en local
+API suffisante -> mais prévoir tester avec Postam pour la démo
+
+Note basé sur la mise en pratique et capacité de présentation
+
+Notre projet tourne autour de ces microService:
+APplication de gestion d'une bibliothèque
+Description: Gérer les livres, les utilisateurs et les emprunts
+1. Service des livres
+Ajouter/supprimer/modifier un livre
+Chercher des livres par titre et auteur
+Verifier le disponiblité des livres
+
+2. Service des utilisateurs
+Creer/Supprimer/modifier des comptes utilisateurd
+Verifier les info d'un utilisateur
+Gerer les penalites des utilisateurs en retard
+
+3.Service des emprunts
+Enregistrer un emprunt
+Verifier les emprunts en cours pour un utilisateur
+Notifier les retard
+
+Je m'occupe de la partie 2. Service des utilisateurs, peut tu me faire un mcd, un fichier sql avec les données ainsi qu'un code en python?
+
++--------------------+             +-----------------+
+| Utilisateur        |             | Pénalité        |
++--------------------+             +-----------------+
+| id (PK)            |<----------- | id (PK)         |
+| nom                |             | utilisateur_id (FK) |
+| prenom             |             | montant         |
+| email              |             | description     |
+| date_creation      |             | date_penalite   |
++--------------------+             +-----------------+
